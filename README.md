@@ -23,4 +23,4 @@
   - ファストトラベルで効果を失うので「鳥脚の黄金漬け」は使用不可
   - 設定／カメラの自動回転をオン（推奨）
   - 終了したい場合はUPボタンをもう一度押す（プログラムの実行中のタイミングで停止しない場合があるので1秒程度長押しでタイミングを図る）
-- PlayStation 5への接続方法については[gh repo clone Kumataku-JP/KeyRegistrationSketch](url)を参照してください。
+- PlayStation 5への接続方法については[KeyRegistrationSketch](https://github.com/Kumataku-JP/KeyRegistrationSketch.git)を参照してください。
