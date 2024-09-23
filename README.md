@@ -5,7 +5,7 @@
 - プロロのコマンドマクロ
 - PlayStation 5にReaSnowS1を介してジョイスティックとして機能するようボタン設定
 - Elden Ring  Ver.1.2.3
-- プログラムセット Ver.1.2
+- スケッチ Ver.1.3
 - SELECTボタンでモードの切り替え
   - モード0
 
@@ -24,3 +24,7 @@
   - 設定／カメラの自動回転をオン（推奨）
   - 終了したい場合はUPボタンをもう一度押す（プログラムの実行中のタイミングで停止しない場合があるので1秒程度長押しでタイミングを図る）
 - PlayStation 5への接続方法については[KeyRegistrationSketch](https://github.com/Kumataku-JP/KeyRegistrationSketch.git)を参照してください。
+
+## 修正履歴
+
+- v1.3  NSControlLibraryのバージョンアップ(1.2.0)に伴いアナログスティックのコードを適応
