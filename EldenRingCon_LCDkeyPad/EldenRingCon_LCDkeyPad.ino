@@ -1,8 +1,8 @@
 /*  ArduinoとLCD keypad Shield端末を使用して実行するプログラム
  *  PlayStation 5にReaSnowS1を介してジョイスティックとして機能するようボタン設定
  *
+ *  スケッチ Ver.1.3
  *  Elden Ring  Ver.1.2.3
- *  プログラムセット Ver.1.2
  *
  *  SELECTボタンでモードの切り替え
  *  モード0  モーグウィン王朝でのルーン稼ぎマクロ
@@ -198,17 +198,17 @@ void mode0() {
     lcdCount(lap);
     lcd.setCursor(5, 0);
     lcd.blink();
-    leftStickTilt(0, 100, 2000);
+    stickTilt(Stick::LEFT, 0, 100, 2000);
     prg++;
   } else if (steyModeUP && prg == 1) {
-    leftStickTilt(-25, 100, 2000);
+    stickTilt(Stick::LEFT, -25, 100, 2000);
     prg++;
   } else if (steyModeUP && prg == 2) {
-    leftStickTilt(0, 100, 1000);
+    stickTilt(Stick::LEFT, 0, 100, 1000);
     prg++;
   } else if (steyModeUP && prg == 3) {
     pushButton(Button::ZL, 40, 3000, 2);
-    leftStickNeutral();
+    stickNeutral(Stick::LEFT);
     delay(3000);
     prg++;
   } else if (steyModeUP && prg == 4) {
@@ -241,7 +241,7 @@ void mode0() {
     lcd.setCursor(0, 1);
     lcd.print("PROLO:");
     lcd.write(byte(5));  // down 5
-    leftStickNeutral();
+    stickNeutral(Stick::LEFT);
     lcd.noBlink();
     prg = 0;
   }
@@ -250,54 +250,54 @@ void mode0() {
 void mode1() {
   keys = read_LCD_buttons(analogRead(0));
   if (keys == btnUP) {
-    leftStickTilt(0, 100);
+    stickTilt(Stick::LEFT, 0, 100);
     lcd.setCursor(2, 0);
     lcd.cursor();
     delay(250);
   } else if (keys == btnDOWN) {
-    leftStickTilt(180, 100);
+    stickTilt(Stick::LEFT, 180, 100);
     lcd.setCursor(2, 0);
     lcd.cursor();
     delay(250);
   } else if (keys == btnLEFT) {
-    leftStickTilt(270, 100);
+    stickTilt(Stick::LEFT, 270, 100);
     lcd.setCursor(2, 0);
     lcd.cursor();
     delay(250);
   } else if (keys == btnRIGHT) {
-    leftStickTilt(90, 100);
+    stickTilt(Stick::LEFT, 90, 100);
     lcd.setCursor(2, 0);
     lcd.cursor();
     delay(250);
   } else {
-    leftStickNeutral();
+    stickNeutral(Stick::LEFT);
     lcd.noCursor();
   }
 }
 void mode2() {
   keys = read_LCD_buttons(analogRead(0));
   if (keys == btnUP) {
-    rightStickTilt(0, 100);
+    stickTilt(Stick::RIGHT, 0, 100);
     lcd.setCursor(2, 0);
     lcd.cursor();
     delay(250);
   } else if (keys == btnDOWN) {
-    rightStickTilt(180, 100);
+    stickTilt(Stick::RIGHT, 180, 100);
     lcd.setCursor(2, 0);
     lcd.cursor();
     delay(250);
   } else if (keys == btnLEFT) {
-    rightStickTilt(270, 100);
+    stickTilt(Stick::RIGHT, 270, 100);
     lcd.setCursor(2, 0);
     lcd.cursor();
     delay(250);
   } else if (keys == btnRIGHT) {
-    rightStickTilt(90, 100);
+    stickTilt(Stick::RIGHT, 90, 100);
     lcd.setCursor(2, 0);
     lcd.cursor();
     delay(250);
   } else {
-    rightStickNeutral();
+    stickNeutral(Stick::RIGHT);
     lcd.noCursor();
   }
 }
